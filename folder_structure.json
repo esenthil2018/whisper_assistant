@@ -1,0 +1,202 @@
+.
+├── Dockerfile
+├── README.md
+├── Senthil_Esakkiappan_Resume.pdf
+├── data
+│   ├── embeddings
+│   │   ├── 0904c282-c96b-4282-8136-3b70f7dfc0a6
+│   │   │   ├── data_level0.bin
+│   │   │   ├── header.bin
+│   │   │   ├── length.bin
+│   │   │   └── link_lists.bin
+│   │   ├── 1b443745-9a25-41ec-94dc-b113670b2ab1
+│   │   │   ├── data_level0.bin
+│   │   │   ├── header.bin
+│   │   │   ├── length.bin
+│   │   │   └── link_lists.bin
+│   │   ├── 56a4d44c-af73-4f04-944e-8d6c0855228f
+│   │   │   ├── data_level0.bin
+│   │   │   ├── header.bin
+│   │   │   ├── length.bin
+│   │   │   └── link_lists.bin
+│   │   └── chroma.sqlite3
+│   ├── metadata.db
+│   ├── processed
+│   └── raw
+│       └── whisper
+│           ├── CHANGELOG.md
+│           ├── LICENSE
+│           ├── MANIFEST.in
+│           ├── README.md
+│           ├── approach.png
+│           ├── data
+│           │   ├── README.md
+│           │   └── meanwhile.json
+│           ├── language-breakdown.svg
+│           ├── model-card.md
+│           ├── notebooks
+│           │   ├── LibriSpeech.ipynb
+│           │   └── Multilingual_ASR.ipynb
+│           ├── pyproject.toml
+│           ├── requirements.txt
+│           ├── setup.py
+│           ├── tests
+│           │   ├── conftest.py
+│           │   ├── jfk.flac
+│           │   ├── test_audio.py
+│           │   ├── test_normalizer.py
+│           │   ├── test_timing.py
+│           │   ├── test_tokenizer.py
+│           │   └── test_transcribe.py
+│           └── whisper
+│               ├── __init__.py
+│               ├── __main__.py
+│               ├── assets
+│               │   ├── gpt2.tiktoken
+│               │   ├── mel_filters.npz
+│               │   └── multilingual.tiktoken
+│               ├── audio.py
+│               ├── decoding.py
+│               ├── model.py
+│               ├── normalizers
+│               │   ├── __init__.py
+│               │   ├── basic.py
+│               │   ├── english.json
+│               │   └── english.py
+│               ├── timing.py
+│               ├── tokenizer.py
+│               ├── transcribe.py
+│               ├── triton_ops.py
+│               ├── utils.py
+│               └── version.py
+├── docker-compose.production.yml
+├── docker-compose.staging.yml
+├── docker-compose.yml
+├── folder_structure.json
+├── logs
+├── project_structure.txt
+├── rag_verification_results.json
+├── requirements.txt
+├── run.py
+├── scripts
+│   └── deploy
+│       ├── deploy.py
+│       └── setup_environment.py
+├── setup.log
+├── setup.py
+├── setup_whisper_assistant.py
+├── src
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── __init__.cpython-311.pyc
+│   ├── ai_processing
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── context_retriever.cpython-311.pyc
+│   │   │   ├── llm_interface.cpython-311.pyc
+│   │   │   ├── query_processor.cpython-311.pyc
+│   │   │   ├── response_generator.cpython-311.pyc
+│   │   │   ├── text_content_retriever.cpython-311.pyc
+│   │   │   └── text_search_handler.cpython-311.pyc
+│   │   ├── components
+│   │   ├── context_retriever.py
+│   │   ├── llm_interface.py
+│   │   ├── query_processor.py
+│   │   ├── response_generator.py
+│   │   ├── text_content_retriever.py
+│   │   ├── text_search_handler.py
+│   │   └── utils
+│   ├── data_ingestion
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── code_parser.cpython-311.pyc
+│   │   │   ├── content_analyzer.cpython-311.pyc
+│   │   │   ├── repo_crawler.cpython-311.pyc
+│   │   │   └── text_processor.cpython-311.pyc
+│   │   ├── code_parser.py
+│   │   ├── components
+│   │   ├── content_analyzer.py
+│   │   ├── extractors
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── api_extractor.cpython-311.pyc
+│   │   │   │   ├── doc_extractor.cpython-311.pyc
+│   │   │   │   └── env_extractor.cpython-311.pyc
+│   │   │   ├── api_extractor.py
+│   │   │   ├── doc_extractor.py
+│   │   │   └── env_extractor.py
+│   │   ├── repo_crawler.py
+│   │   ├── text_processor.py
+│   │   └── utils
+│   ├── storage
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-310.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── cache.cpython-310.pyc
+│   │   │   ├── cache.cpython-311.pyc
+│   │   │   ├── enhanced_storage.cpython-311.pyc
+│   │   │   ├── metadata_store.cpython-310.pyc
+│   │   │   ├── metadata_store.cpython-311.pyc
+│   │   │   ├── vector_store.cpython-310.pyc
+│   │   │   └── vector_store.cpython-311.pyc
+│   │   ├── cache.py
+│   │   ├── components
+│   │   ├── enhanced_storage.py
+│   │   ├── metadata_store.py
+│   │   ├── utils
+│   │   └── vector_store.py
+│   └── ui
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-310.pyc
+│       │   ├── __init__.cpython-311.pyc
+│       │   ├── app.cpython-310.pyc
+│       │   ├── app.cpython-311.pyc
+│       │   ├── main.cpython-310.pyc
+│       │   └── main.cpython-311.pyc
+│       ├── app.py
+│       ├── components
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-311.pyc
+│       │   │   ├── chat.cpython-311.pyc
+│       │   │   └── code_viewer.cpython-311.pyc
+│       │   ├── chat.py
+│       │   └── code_viewer.py
+│       ├── config.py
+│       ├── main.py
+│       └── utils
+│           ├── __init__.py
+│           ├── __pycache__
+│           │   ├── __init__.cpython-311.pyc
+│           │   └── formatting.cpython-311.pyc
+│           └── formatting.py
+├── tests
+│   ├── __init__.py
+│   ├── test_ai_processing
+│   │   └── __init__.py
+│   ├── test_data_ingestion
+│   │   └── __init__.py
+│   ├── test_storage
+│   │   └── __init__.py
+│   └── test_ui
+│       └── __init__.py
+├── verification_report.json
+├── verify_data.log
+├── verify_data.py
+├── verify_rag.py
+├── verify_setup.py
+├── whisper_assistant.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   ├── requires.txt
+│   └── top_level.txt
+└── whisper_assistant.log
+
+46 directories, 154 files

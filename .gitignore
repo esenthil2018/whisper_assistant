@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local development
+.env
+.env.local
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Data directories
+data/
+embeddings/
+
+# Cache
+.cache/
+
+# Add these lines to your .gitignore file
+.DS_Store
+.env.example
+**/.DS_Store 
+

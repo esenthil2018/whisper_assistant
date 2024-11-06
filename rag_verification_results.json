@@ -1,0 +1,153 @@
+{
+  "timestamp": "2024-11-02 22:59:10.375864",
+  "search_tests": [
+    {
+      "query": "setup.py",
+      "success": false,
+      "results_found": true,
+      "relevance_met": false,
+      "expected_file_found": false,
+      "terms_found": false,
+      "details": {
+        "top_results": [
+          {
+            "file": "tests/conftest.py",
+            "relevance": -0.09582208064929199,
+            "preview": "Function: pytest_configure\nArguments: config\nFunction: random"
+          },
+          {
+            "file": "tests/test_transcribe.py",
+            "relevance": -0.5354458073219985,
+            "preview": "Function: test_transcribe\nArguments: model_name"
+          }
+        ]
+      }
+    },
+    {
+      "query": "how to transcribe audio",
+      "success": false,
+      "results_found": true,
+      "relevance_met": false,
+      "expected_file_found": true,
+      "terms_found": true,
+      "details": {
+        "top_results": [
+          {
+            "file": "tests/test_audio.py",
+            "relevance": -0.02763681052373501,
+            "preview": "Function: test_audio"
+          },
+          {
+            "file": "tests/test_transcribe.py",
+            "relevance": -0.11709891592830957,
+            "preview": "Function: test_transcribe\nArguments: model_name"
+          }
+        ]
+      }
+    },
+    {
+      "query": "project dependencies",
+      "success": false,
+      "results_found": true,
+      "relevance_met": false,
+      "expected_file_found": false,
+      "terms_found": false,
+      "details": {
+        "top_results": [
+          {
+            "file": "tests/conftest.py",
+            "relevance": -0.23482503664155074,
+            "preview": "Function: pytest_configure\nArguments: config\nFunction: random"
+          },
+          {
+            "file": "whisper/__init__.py",
+            "relevance": -0.5546402767035417,
+            "preview": "Function: _download\nArguments: url, root, in_memory\nFunction: available_models\nReturns the names of available models\nFunction: load_model\nLoad a Whisper ASR model\n\nParameters\n----------\nname : str\n   "
+          }
+        ]
+      }
+    }
+  ],
+  "query_tests": [
+    {
+      "query": "What are the dependencies required to use Whisper?",
+      "success": false,
+      "query_processing": {
+        "detected_types": [
+          "documentation",
+          "api",
+          "setup"
+        ],
+        "expected_types": [
+          "setup",
+          "documentation"
+        ],
+        "types_match": true
+      },
+      "context_retrieval": {
+        "context_found": true,
+        "required_context_found": false,
+        "info_coverage": 0.0
+      },
+      "response_quality": {}
+    },
+    {
+      "query": "How do I transcribe audio using Whisper?",
+      "success": false,
+      "query_processing": {
+        "detected_types": [
+          "api",
+          "documentation"
+        ],
+        "expected_types": [
+          "api",
+          "documentation"
+        ],
+        "types_match": true
+      },
+      "context_retrieval": {
+        "context_found": true,
+        "required_context_found": true,
+        "info_coverage": 0.6666666666666666
+      },
+      "response_quality": {}
+    },
+    {
+      "query": "Show me the setup.py file",
+      "success": false,
+      "query_processing": {
+        "detected_types": [
+          "code",
+          "setup"
+        ],
+        "expected_types": [
+          "code"
+        ],
+        "types_match": true
+      },
+      "context_retrieval": {
+        "context_found": true,
+        "required_context_found": false,
+        "info_coverage": 0.0
+      },
+      "response_quality": {}
+    }
+  ],
+  "metadata_tests": [
+    {
+      "success": true,
+      "api_metadata": {
+        "count": 137,
+        "has_required_fields": true
+      },
+      "env_variables": {
+        "count": 1,
+        "has_required_fields": true
+      },
+      "repo_info": {
+        "exists": true,
+        "has_required_sections": true
+      }
+    }
+  ]
+}

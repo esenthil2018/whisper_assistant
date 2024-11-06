@@ -1,0 +1,69 @@
+.
+├── Dockerfile
+├── README.md
+├── data
+│   ├── embeddings
+│   ├── processed
+│   └── raw
+├── docker-compose.production.yml
+├── docker-compose.staging.yml
+├── docker-compose.yml
+├── logs
+├── project_structure.txt
+├── requirements.txt
+├── scripts
+│   └── deploy
+│       ├── deploy.py
+│       └── setup_environment.py
+├── setup.py
+├── src
+│   ├── __init__.py
+│   ├── ai_processing
+│   │   ├── __init__.py
+│   │   ├── components
+│   │   ├── context_retriever.py
+│   │   ├── llm_interface.py
+│   │   ├── query_processor.py
+│   │   ├── response_generator.py
+│   │   └── utils
+│   ├── data_ingestion
+│   │   ├── __init__.py
+│   │   ├── code_parser.py
+│   │   ├── components
+│   │   ├── extractors
+│   │   │   ├── __init__.py
+│   │   │   ├── api_extractor.py
+│   │   │   ├── doc_extractor.py
+│   │   │   └── env_extractor.py
+│   │   ├── repo_crawler.py
+│   │   └── utils
+│   ├── storage
+│   │   ├── __init__.py
+│   │   ├── cache.py
+│   │   ├── components
+│   │   ├── metadata_store.py
+│   │   ├── utils
+│   │   └── vector_store.py
+│   └── ui
+│       ├── __init__.py
+│       ├── app.py
+│       ├── components
+│       │   ├── __init__.py
+│       │   ├── chat.py
+│       │   └── code_viewer.py
+│       ├── main.py
+│       └── utils
+│           ├── __init__.py
+│           └── formatting.py
+└── tests
+    ├── __init__.py
+    ├── test_ai_processing
+    │   └── __init__.py
+    ├── test_data_ingestion
+    │   └── __init__.py
+    ├── test_storage
+    │   └── __init__.py
+    └── test_ui
+        └── __init__.py
+
+27 directories, 40 files
